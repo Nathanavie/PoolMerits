@@ -40,4 +40,8 @@ tr:hover {
   background: #cccccc40;
 }
 
+.container {
+  overflow-x: scroll;
+}
+
 @import "https://taniarascia.github.io/primitive/css/main.css";
