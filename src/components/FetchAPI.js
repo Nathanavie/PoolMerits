@@ -28,6 +28,10 @@ class FetchData extends React.Component {
                 }
 
     render() {
+      const { isLoaded } = this.state;
+      if (!isLoaded) {
+        return <h1>Loading the table...</h1>;
+      } else {
         return (
         <>
           <section class="container">
@@ -49,5 +53,6 @@ class FetchData extends React.Component {
         )
     }
   }
+}
 
 export default FetchData;
