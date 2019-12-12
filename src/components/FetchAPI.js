@@ -28,7 +28,6 @@ class FetchData extends React.Component {
                 }
 
     render() {
-      let { isLoaded, result, playerPos, playerName, playerTeam, playerMatches, playerWins, playerLosses, playerPerc, playerWalkover } = this.state;
         return (
         <>
           <section class="container">
