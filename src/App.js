@@ -7,10 +7,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import FetchAPI from './components/FetchAPI';
-import FetchPremTable from './components/FetchPremTable';
-import FetchLeague1Merits from './components/FetchLeagueOneMerits';
-import FetchLeague1Table from './components/FetchLeague1Table';
+import PremMerits from './components/PremMerits';
+import PremTable from './components/PremTable';
+import League1Merits from './components/League1Merits';
+import League1Table from './components/League1Table';
 
 function App() {
   return (
@@ -26,10 +26,10 @@ function App() {
         <Link to={'/League1Table'} id="League1Table" >League One Table</Link>
         </nav>
         <Switch>
-          <Route exact path='/' component={FetchAPI} />
-          <Route path='/PremTable' component={FetchPremTable} />
-          <Route path='/League1Merits' component={FetchLeague1Merits} />
-          <Route path='/League1Table' component={FetchLeague1Table} />
+          <Route exact path='/' component={PremMerits} />
+          <Route path='/PremTable' component={PremTable} />
+          <Route path='/League1Merits' component={League1Merits} />
+          <Route path='/League1Table' component={League1Table} />
         </Switch>
       </div>
     </Router>
