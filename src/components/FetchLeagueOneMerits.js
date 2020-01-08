@@ -15,12 +15,12 @@ class FetchData extends React.Component {
     }
 
     fetchData = () => {
-        fetch('https://v2-api.sheety.co/7f01a568513886dcd760b17376d01421/testing/premMeritsByWins')
+        fetch('https://v2-api.sheety.co/7f01a568513886dcd760b17376d01421/testing/league1MeritsByWins')
         .then(response => response.json())
         .then(data => {
                   this.setState({
                       isLoaded: true,
-                      result: data.premMeritsByWins,
+                      result: data.league1MeritsByWins,
                     })
                   })
                     .catch(err => console.error(err)

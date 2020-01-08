@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from './PremMeritTable'
+import Table from './PremLeagueTable'
 
 class FetchData extends React.Component {
   constructor(props) {
@@ -15,13 +15,14 @@ class FetchData extends React.Component {
     }
 
     fetchData = () => {
-        fetch('https://v2-api.sheety.co/7f01a568513886dcd760b17376d01421/testing/premMeritsByWins')
+        fetch('https://v2-api.sheety.co/7f01a568513886dcd760b17376d01421/testing/nathanPremTable')
         .then(response => response.json())
         .then(data => {
                   this.setState({
                       isLoaded: true,
-                      result: data.premMeritsByWins,
+                      result: data.nathanPremTable,
                     })
+                    console.log(this.state.result)
                   })
                     .catch(err => console.error(err)
                   )
@@ -39,16 +40,18 @@ class FetchData extends React.Component {
             <thead>
               <tr>
                 <th>Position</th>
-                <th>Name</th>
                 <th>Team</th>
                 <th>Played</th>
                 <th>Won</th>
+                <th>Drawn</th>
                 <th>Lost</th>
-                <th>Win %</th>
-                <th>8 Balls</th>
+                <th>Points</th>
+                <th>Frames Won</th>
+                <th>Frames Lost</th>
+                <th>Frames Difference</th>
               </tr>
             </thead>
-                <Table table={this.state.result} />
+            <Table table={this.state.result} />
           </table>
           </section>
         </>
