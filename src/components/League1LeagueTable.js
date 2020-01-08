@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Table = props => {
-  const rows = props.table.slice(0, 11).map((row, index) => {
+  const rows = props.table.map((row, index) => {
     let wins = row.framesWon;
     let loss = row.framesLost;
     let diff = wins - loss;
