@@ -15,7 +15,7 @@ class FetchData extends React.Component {
     }
 
     fetchData = () => {
-        fetch('https://v2-api.sheety.co/7f01a568513886dcd760b17376d01421/testing/nathanPremTable')
+        fetch('https://api.sheety.co/424f603eeb31fd31a4f6870f89f727cb/leagueMerits/nathanPremTable')
         .then(response => response.json())
         .then(data => {
                   this.setState({
